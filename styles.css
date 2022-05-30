@@ -1,0 +1,258 @@
+:root {
+    --nav-color: #eef1f5;
+    --color-1: #5694D1;
+    --color-2:  #D5EBFF;
+    --color-3: #234567;
+}
+
+* {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav {
+    background-color: var(--nav-color);
+}
+
+
+img{ 
+    max-width: 80%;
+    height: auto;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+#main {
+    min-height: 400px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.text-undlnd {
+    text-underline-offset: 2px;
+    text-decoration: underline var(--color-1) 3px;
+}
+
+#main-text{
+    animation: fadeIn 4s;
+    display: flex;
+    align-items: center;
+}
+
+@keyframes fadeIn {
+    0% {opacity:0.2;}
+    100% {opacity:1;}
+  }
+
+#main-img {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#info {
+    min-height: 400px;
+    background-color: var(--color-2);
+}
+
+.info-img {
+    max-width: 300px;
+    margin-top: 15px;
+    filter: grayscale(1);
+    opacity: 50%;
+    cursor: pointer;
+    transition-duration: .5s;
+}
+
+.info-img:hover{
+    filter: grayscale(0);
+    opacity: 100%;
+}
+
+.plan{
+    min-height: 600px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.63);
+    margin: 7px;
+    box-shadow: 4px 3px 46px -41px rgba(0,0,0,0.17);
+    -webkit-box-shadow: 4px 3px 46px -41px rgba(0,0,0,0.17);
+    -moz-box-shadow: 4px 3px 46px -41px rgba(0,0,0,0.17);
+    transition-duration: .5s;
+    cursor: pointer;
+    padding: 15px;
+    padding-top: 20px;
+}
+
+.plan:hover{
+    background-color: white;
+    box-shadow: 4px 3px 73px -40px rgba(0,0,0,0.47);
+    -webkit-box-shadow: 4px 3px 73px -40px rgba(0,0,0,0.47);
+    -moz-box-shadow: 4px 3px 73px -40px rgba(0,0,0,0.47);
+}
+
+.plan > img {
+    max-height: 170px;
+}
+
+.plan > h4 {
+    margin: 5px;
+    text-decoration: underline var(--color-2);
+}
+
+.plan > small {
+    color: grey;
+}
+
+.plan >h1 {
+    margin: 5px;
+    font-size: 35px;
+}
+
+.plan .separator {
+    opacity: 1;
+    color: var(--color-1);
+    height: 3px;
+    border-radius: 3px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.plan .icon {
+    max-height: 20px;
+    margin-right: 5px;
+}
+
+.plan .feature {
+    display: flex;
+    align-items: center;
+}
+
+
+#contact {
+    min-height: 400px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+/*    align-items: center;*/
+}
+
+#submit {
+    border: 2px solid var(--color-1);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 200px;
+    background-color: transparent;
+    color: var(--color-3);
+    transition-duration: .4s;
+    font-weight: 6  00;
+}
+
+#submit:hover{
+    border: 2px solid transparent;
+    background-color: var(--color-2);
+}
+
+
+#footer {
+    min-height: 90px;
+    background-color: var(--nav-color);
+}
+
+#icons {
+    position: fixed;
+    right: 6px;
+    bottom: 6px;
+}
+
+#icons div {
+    height: 70px;
+    width: 70px;
+}
+
+
+@media (max-width: 576px) { /* */
+    #main {
+        background-image: url("images/server-min-op3.png");
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .plan{
+        margin: 0;
+        margin-top: 30px;
+    }
+}
+
+
+
+
+
+
+
+
+/* From uiverse.io by @alexmaracinaru */
+.cta {
+    position: relative;
+    margin: auto;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+}
+
+.cta:before {
+    content: "";
+    position: absolute;
+    top: -9px;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: var(--color-2);
+    width: 55px;
+    height: 55px;
+    transition: all 0.3s ease;
+}
+
+.cta span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #122f5d;
+}
+
+.cta svg {
+    position: relative;
+    top: -2px;
+    margin-left: 7px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: var(--color-3);
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+}
+
+.cta:hover:before {
+    width: 100%;
+    background: var(--color-2);
+}
+
+.cta:hover svg {
+    transform: translateX(0);
+}
+
+.cta:active {
+    transform: scale(0.95);
+}
