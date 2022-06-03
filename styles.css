@@ -18,7 +18,7 @@ nav {
     max-height: 20px;
 }
 
-.separator {
+.nav-separator {
     width: 1px;
     background-color: rgb(184, 184, 184);
     height: 30px;
@@ -93,8 +93,7 @@ input::-webkit-inner-spin-button {
 
 .plan{
     min-height: 600px;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.63);
+    border-radius: 10px;
     margin: 7px;
     box-shadow: 4px 3px 46px -41px rgba(0,0,0,0.17);
     -webkit-box-shadow: 4px 3px 46px -41px rgba(0,0,0,0.17);
@@ -103,10 +102,11 @@ input::-webkit-inner-spin-button {
     cursor: pointer;
     padding: 15px;
     padding-top: 20px;
+
+    border: 1px solid var(--nav-color);
 }
 
 .plan:hover{
-    background-color: white;
     box-shadow: 4px 3px 73px -40px rgba(0,0,0,0.47);
     -webkit-box-shadow: 4px 3px 73px -40px rgba(0,0,0,0.47);
     -moz-box-shadow: 4px 3px 73px -40px rgba(0,0,0,0.47);
@@ -142,11 +142,15 @@ input::-webkit-inner-spin-button {
 .plan .icon {
     max-height: 20px;
     margin-right: 5px;
+    margin-top: 3px;
 }
 
 .plan .feature {
     display: flex;
-    align-items: center;
+}
+
+.feature p {
+    text-align: start;
 }
 
 

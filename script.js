@@ -2,6 +2,11 @@ const changeTheme = document.getElementById('selectTheme');
 const themeName = 'theme';
 let actualTheme = localStorage.getItem(themeName);
 
+let colors = {
+    navColor: '#eef1f5',
+    color2: '#D5EBFF'
+}
+
 if (!actualTheme){
     localStorage.setItem(themeName, 'light')
 } else if (actualTheme === 'dark'){
@@ -17,41 +22,38 @@ changeTheme.addEventListener('change', (e) => {
         localStorage.setItem(themeName, 'light')
         setLight()
     }
-    console.log(localStorage)
 } )
 
 function setDark(){
-    const navColor = '#3B3F43'
+    colors.navColor = '#3B3F43';
     const nav = document.getElementById('nav')
-    nav.style.backgroundColor = navColor;
+    nav.style.backgroundColor = colors.navColor;
     nav.classList.add('navbar-dark')
     const main = document.getElementById('main')
     main.classList.add('bg-dark', 'text-light')
     const info = document.getElementById('info')
-    info.style.backgroundColor = navColor;
+    info.style.backgroundColor = colors.navColor;
     info.classList.add('text-light')
     const contact = document.getElementById('contact')
     contact.classList.add('bg-dark', 'text-light')
     for (let element of document.getElementsByClassName('form-control')){
-        element.style.backgroundColor = navColor
+        element.style.backgroundColor = colors.navColor
         element.style.color = '#fff'
         element.style.border = 'none'
     }
 
     const footer = document.getElementById('footer')
-    footer.style.backgroundColor = navColor
+    footer.style.backgroundColor = colors.navColor
 }
 
 function setLight(){
-    const navColor = '#eef1f5'
-    const color2 = '#D5EBFF'
     const nav = document.getElementById('nav')
-    nav.style.backgroundColor = navColor;
+    nav.style.backgroundColor = colors.navColor;
     nav.classList.remove('navbar-dark')
     const main = document.getElementById('main')
     main.classList.remove('bg-dark', 'text-light')
     const info = document.getElementById('info')
-    info.style.backgroundColor = color2;
+    info.style.backgroundColor = colors.color2;
     info.classList.remove('text-light')
     const contact = document.getElementById('contact')
     contact.classList.remove('bg-dark', 'text-light')
@@ -62,5 +64,5 @@ function setLight(){
     }
 
     const footer = document.getElementById('footer')
-    footer.style.backgroundColor = navColor
+    footer.style.backgroundColor = colors.navColor
 }
