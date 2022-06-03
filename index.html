@@ -51,7 +51,7 @@
 					<div>
 						<h1 class="text-undlnd" style="margin-bottom: 40px;">La mejor opción para potenciar o comenzar con tu negocio</h1>
 						
-						<a class="cta" href="#prices" style="text-decoration: none;">
+						<a class="cta" href="#prices" style="text-decoration: none;" id="light-cta">
 
 							<span>Ver precios</span>
 
@@ -60,6 +60,17 @@
 								<polyline points="8 1 12 5 8 9"></polyline>
 							</svg>
 						</a>
+
+						<a class="cta" href="#prices" style="text-decoration: none; display: none;" id="dark-cta" >
+
+							<span>Ver precios</span>
+
+							<svg viewBox="0 0 13 10" height="10px" width="15px">
+								<path d="M1,5 L11,5"></path>
+								<polyline points="8 1 12 5 8 9"></polyline>
+							</svg>
+						</a>
+
 					</div>
 				</div>
 				
@@ -366,7 +377,7 @@
 					</div>
 					<div class="col-12 col-lg-6">
 						<label for="contactNum" class="form-label">Nro. de tel&eacute;fono:</label>
-						<input type="number" class="form-control" id="contactNum" placeholder="123456789" name="Nro.Telefonico">
+						<input type="number" class="form-control" id="contactNum" placeholder="123456789" name="Nro.Telefonico" required>
 					</div>
 				</div>
 				<div class="row py-3">
