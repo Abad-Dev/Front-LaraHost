@@ -29,6 +29,10 @@ function setDark(){
     const nav = document.getElementById('nav')
     nav.style.backgroundColor = colors.darkNavColor;
     nav.classList.add('navbar-dark')
+    const [sun, darkSun] = [document.getElementById('sun'), document.getElementById('light-sun')]
+    sun.style.display = 'none'; darkSun.style.display = 'block'
+    const [moon, darkMoon] = [document.getElementById('moon'), document.getElementById('light-moon')]
+    moon.style.display = 'none'; darkMoon.style.display = 'block'
     const main = document.getElementById('main')
     main.classList.add('bg-dark', 'text-light')
     changeCtaDark();
@@ -60,6 +64,10 @@ function setLight(){
     const nav = document.getElementById('nav')
     nav.style.backgroundColor = colors.navColor;
     nav.classList.remove('navbar-dark')
+    const [sun, darkSun] = [document.getElementById('sun'), document.getElementById('light-sun')]
+    sun.style.display = 'block'; darkSun.style.display = 'none'
+    const [moon, darkMoon] = [document.getElementById('moon'), document.getElementById('light-moon')]
+    moon.style.display = 'block'; darkMoon.style.display = 'none'
     const main = document.getElementById('main')
     main.classList.remove('bg-dark', 'text-light')
     changeCtaLight()
